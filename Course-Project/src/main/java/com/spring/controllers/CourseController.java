@@ -3,6 +3,7 @@ package com.spring.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -14,6 +15,12 @@ public class CourseController {
 	
 	@Autowired
 	private ProjectServices projectServices;
+	
+	@RequestMapping(value="{projectId}")
+	public String find(Model model,@PathVariable("projectId") int projectId){
+		model.addAttribute("project",this.projectServices.find(projectId));
+		return "project";
+	}
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String addProject(){
 		System.out.println("addProject");

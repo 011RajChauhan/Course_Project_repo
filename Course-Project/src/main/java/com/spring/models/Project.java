@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Project {
 	
-	private long projectId;
+	private int projectId;
 	
 	private String name;
 	
@@ -12,9 +12,9 @@ public class Project {
 	
 	private String sponsor;
 	
-	private BigDecimal authorizedHours;	
+	private int authorizedHours;	
 	
-	private BigDecimal authorizedFunds;
+	private int authorizedFunds;
 	
 	private String year;
 	
@@ -22,11 +22,11 @@ public class Project {
 	
 	private String type;
 	
-	public long getProjectId() {
+	public int getProjectId() {
 		return projectId;
 	}
 
-	public void setProjectId(long projectId) {
+	public void setProjectId(int projectId) {
 		this.projectId = projectId;
 	}
 
@@ -54,20 +54,20 @@ public class Project {
 		this.sponsor = sponsor;
 	}
 
-	public BigDecimal getAuthorizedHours() {
+	public int getAuthorizedHours() {
 		return authorizedHours;
 	}
 
-	public void setAuthorizedHours(BigDecimal authorizedHours) {
-		this.authorizedHours = authorizedHours;
+	public void setAuthorizedHours(int k) {
+		this.authorizedHours = k;
 	}
 
-	public BigDecimal getAuthorizedFunds() {
+	public int getAuthorizedFunds() {
 		return authorizedFunds;
 	}
 
-	public void setAuthorizedFunds(BigDecimal authorizedFunds) {
-		this.authorizedFunds = authorizedFunds;
+	public void setAuthorizedFunds(int j) {
+		this.authorizedFunds = j;
 	}
 
 	public String getYear() {

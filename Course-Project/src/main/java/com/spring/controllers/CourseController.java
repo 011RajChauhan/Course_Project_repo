@@ -1,13 +1,19 @@
 package com.spring.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.spring.services.ProjectServices;
 
 @Controller
 @RequestMapping(value="/project")
 public class CourseController {
 	
+	@Autowired
+	private ProjectServices projectServices;
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String addProject(){
 		System.out.println("addProject");
@@ -36,6 +42,13 @@ public class CourseController {
 	public String saveSpecial2Project(){
 		System.out.println("saveSpecial2Project");
 		return "project_add";
+	}
+	
+	
+	@RequestMapping(value="/find",method=RequestMethod.GET)
+	public String find(Model model){
+		model.addAttribute("projects",projectServices.findAll());
+		return "projects";
 	}
 	
 }

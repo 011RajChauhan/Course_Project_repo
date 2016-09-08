@@ -21,7 +21,7 @@
 	
 	<div class="container">
 	
-		<h2>Current Project</h2>
+		<h1>Current Project</h1>
 		<ul class="list-group">
 			<li class="list-group-item"><label>Project Name:</label><span>${currentProject.name }</span></li>
 			<li class="list-group-item"><label>Project Name:</label><span>${currentProject.sponsor }</span></li>

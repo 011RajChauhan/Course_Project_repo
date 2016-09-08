@@ -29,7 +29,7 @@
 					<div class="form-group">
 						<label for="project-type">Type</label>
 						<select name="type" class="selectpicker">
-							<option></option>
+							<option>Nothing Selected</option>
 							<option value="single">Single Year</option>
 							<option value="mutli">Multi Year</option>
 						</select>
@@ -43,18 +43,24 @@
 					<div class="form-group">
 						<label for="funds">Authorized Funds</label>
 						<input type="text" id="funds"
-									class="form-control" name="funds"/>
+									class="form-control" name="authorizedFunds"/>
 					</div>
 					
 					<div class="form-group">
 						<label for="hours">Authorized Hours</label>
 						<input type="text" id="hours"
-									class="form-control" name="authorized_hours"/>
+									class="form-control" name="authorizedHours"/>
+					</div>
+					
+					<div class="form-group">
+						<label for="hours">Year</label>
+						<input type="text" id="year"
+									class="form-control" name="year"/>
 					</div>
 					
 					<div class="form-group">
 						<label for="project-name">Description</label>
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" rows="3" name="description"></textarea>
 					</div>
 					
 					<div class="form-group">
